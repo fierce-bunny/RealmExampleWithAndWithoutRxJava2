@@ -1,6 +1,7 @@
 package com.dh28.realmexample;
 
 import io.reactivex.Completable;
+import io.reactivex.Maybe;
 import io.reactivex.Single;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -24,7 +25,7 @@ class RxUtils {
 				.observeOn(AndroidSchedulers.mainThread());
 	}
 
-	<T> Single<T> inBackground(Single<T> dest) {
+	<T> Maybe<T> inBackground(Maybe<T> dest) {
 		return dest.subscribeOn(Schedulers.io())
 				.observeOn(AndroidSchedulers.mainThread());
 	}

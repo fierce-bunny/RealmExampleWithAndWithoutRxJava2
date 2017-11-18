@@ -4,11 +4,12 @@ import com.dh28.realmexample.base.RxRealmBase;
 import com.dh28.realmexample.model.User;
 
 import io.reactivex.Completable;
+import io.reactivex.Maybe;
 import io.reactivex.Single;
 
 public class RxUserRealm extends RxRealmBase {
 
-	public Single<User> getUser(final String name) {
+	public Maybe<User> getUser(final String name) {
 		return execute(realm -> {
 			User result = realm
 					.where(User.class)

@@ -8,6 +8,7 @@ import com.dh28.realmexample.datasource.UserRealm;
 import com.dh28.realmexample.model.User;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -35,7 +36,7 @@ public class InstrumentedRealmTest extends RxUtils {
 		rxUserRealm = new RxUserRealm();
 
 		userJohn = new User("John", 22);
-		userBill = new User("Lui", 30);
+		userBill = new User("Bill", 30);
 
 		userRealm.saveOrUpdateUser(userJohn);
 
@@ -68,7 +69,11 @@ public class InstrumentedRealmTest extends RxUtils {
 							System.out.println(user.toString());
 							assertEquals(userBill.toString(), user.toString());
 							signal.countDown();
-						}, Throwable::printStackTrace)
+						}, throwable -> {
+							throwable.printStackTrace();
+							signal.countDown();
+							Assert.fail("rx onError");
+						})
 		);
 		try {
 			signal.await();
