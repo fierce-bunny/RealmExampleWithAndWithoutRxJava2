@@ -1,4 +1,4 @@
-package com.dh28.realmexample.datasource;
+package com.dh28.realmexample.data;
 
 import com.dh28.realmexample.base.RealmBase;
 import com.dh28.realmexample.model.User;

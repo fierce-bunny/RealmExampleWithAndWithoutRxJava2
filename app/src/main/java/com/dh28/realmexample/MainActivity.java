@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 
 		/*
-			NOTE: Nothing on UI, sorry. Run InstrumentedRealmTest.java
+			NOTE: No UI, sorry. Run InstrumentedRealmTest.java
 		 */
 
 	}

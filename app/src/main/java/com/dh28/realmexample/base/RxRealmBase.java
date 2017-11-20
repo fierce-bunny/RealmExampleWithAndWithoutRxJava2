@@ -2,7 +2,6 @@ package com.dh28.realmexample.base;
 
 import io.reactivex.Completable;
 import io.reactivex.Maybe;
-import io.reactivex.Single;
 import io.realm.Realm;
 
 public class RxRealmBase {

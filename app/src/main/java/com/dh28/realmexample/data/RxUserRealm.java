@@ -1,11 +1,10 @@
-package com.dh28.realmexample.datasource;
+package com.dh28.realmexample.data;
 
 import com.dh28.realmexample.base.RxRealmBase;
 import com.dh28.realmexample.model.User;
 
 import io.reactivex.Completable;
 import io.reactivex.Maybe;
-import io.reactivex.Single;
 
 public class RxUserRealm extends RxRealmBase {
 

@@ -3,8 +3,8 @@ package com.dh28.realmexample;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.dh28.realmexample.datasource.RxUserRealm;
-import com.dh28.realmexample.datasource.UserRealm;
+import com.dh28.realmexample.data.RxUserRealm;
+import com.dh28.realmexample.data.UserRealm;
 import com.dh28.realmexample.model.User;
 
 import org.junit.After;
